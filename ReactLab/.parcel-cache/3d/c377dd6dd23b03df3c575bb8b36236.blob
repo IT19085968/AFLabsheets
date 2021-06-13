@@ -1,0 +1,98 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _posts = require("./Posts");
+var _postsDefault = parcelHelpers.interopDefault(_posts);
+var _reactRouterDom = require("react-router-dom");
+var _addPost = require("./AddPost");
+var _addPostDefault = parcelHelpers.interopDefault(_addPost);
+const posts = [
+    {
+        id: 1,
+        name: 'React',
+        description: 'Best UI library'
+    },
+    {
+        id: 2,
+        name: 'Node',
+        description: 'Server side JS'
+    }
+];
+class PostsHolder extends _reactDefault.default.Component {
+    constructor(props){
+        super(props);
+    }
+    addNewPost({ name , description  }) {
+        posts.push({
+            id: posts.length + 1,
+            name,
+            description
+        });
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\PostsHolder.jsx",
+                lineNumber: 32
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Switch, {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\PostsHolder.jsx",
+                lineNumber: 33
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            exact: true,
+            path: "/posts",
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\PostsHolder.jsx",
+                lineNumber: 34
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_postsDefault.default, {
+            posts: posts,
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\PostsHolder.jsx",
+                lineNumber: 35
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Route, {
+            path: "/posts/add",
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\PostsHolder.jsx",
+                lineNumber: 37
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_addPostDefault.default, {
+            save: (post)=>this.addNewPost(post)
+            ,
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\PostsHolder.jsx",
+                lineNumber: 38
+            },
+            __self: this
+        }))), /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: "/posts/add",
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\PostsHolder.jsx",
+                lineNumber: 41
+            },
+            __self: this
+        }, "Add")));
+    }
+}
+exports.default = PostsHolder;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

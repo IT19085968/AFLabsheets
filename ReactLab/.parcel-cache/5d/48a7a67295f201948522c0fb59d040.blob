@@ -1,0 +1,121 @@
+var helpers = require("./node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+const posts = [
+    {
+        id: 1,
+        name: 'React',
+        description: 'Best UI library'
+    },
+    {
+        id: 2,
+        name: 'Node',
+        description: 'Server side JS'
+    }
+];
+class App extends _react.Component {
+    constructor(props){
+        super(props);
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("h1", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\App.jsx",
+                lineNumber: 21
+            },
+            __self: this
+        }, "Hello World to React"));
+    }
+    render() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\App.jsx",
+                lineNumber: 26
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("table", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\App.jsx",
+                lineNumber: 27
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("thead", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\App.jsx",
+                lineNumber: 28
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("tr", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\App.jsx",
+                lineNumber: 29
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\App.jsx",
+                lineNumber: 30
+            },
+            __self: this
+        }, "ID"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\App.jsx",
+                lineNumber: 31
+            },
+            __self: this
+        }, "Name"), /*#__PURE__*/ _reactDefault.default.createElement("th", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\App.jsx",
+                lineNumber: 32
+            },
+            __self: this
+        }, "Description"))), /*#__PURE__*/ _reactDefault.default.createElement("tbody", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\App.jsx",
+                lineNumber: 35
+            },
+            __self: this
+        }, posts.map((post)=>{
+            return(/*#__PURE__*/ _reactDefault.default.createElement("tr", {
+                key: post.id.toString(),
+                __source: {
+                    fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\App.jsx",
+                    lineNumber: 37
+                },
+                __self: this
+            }, /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\App.jsx",
+                    lineNumber: 38
+                },
+                __self: this
+            }, post.id), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\App.jsx",
+                    lineNumber: 39
+                },
+                __self: this
+            }, post.name), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+                __source: {
+                    fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\App.jsx",
+                    lineNumber: 40
+                },
+                __self: this
+            }, post.description)));
+        })))));
+    }
+}
+exports.default = App;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

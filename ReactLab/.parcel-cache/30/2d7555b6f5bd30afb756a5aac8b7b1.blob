@@ -1,0 +1,68 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+class Post extends _reactDefault.default.Component {
+    constructor(props){
+        super(props);
+    }
+    render() {
+        const { post  } = this.props;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\Post.jsx",
+                lineNumber: 9
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\Post.jsx",
+                lineNumber: 10
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\Post.jsx",
+                lineNumber: 11
+            },
+            __self: this
+        }, "ID: ", post.id)), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\Post.jsx",
+                lineNumber: 13
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\Post.jsx",
+                lineNumber: 14
+            },
+            __self: this
+        }, "Name: ", post.name)), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\Post.jsx",
+                lineNumber: 16
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("p", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\Post.jsx",
+                lineNumber: 17
+            },
+            __self: this
+        }, "Description: ", post.description))));
+    }
+}
+exports.default = Post;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

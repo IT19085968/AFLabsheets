@@ -1,0 +1,129 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _reactRouterDom = require("react-router-dom");
+class AddPost extends _reactDefault.default.Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            name: '',
+            description: ''
+        };
+    }
+    onChange(event) {
+        const { name , value  } = event.target;
+        this.setState({
+            [name]: value
+        });
+    }
+    render() {
+        const { save  } = this.props;
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\AddPost.jsx",
+                lineNumber: 20
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_reactRouterDom.Link, {
+            to: "/add",
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\AddPost.jsx",
+                lineNumber: 21
+            },
+            __self: this
+        }, "Add"), /*#__PURE__*/ _reactDefault.default.createElement("form", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\AddPost.jsx",
+                lineNumber: 22
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\AddPost.jsx",
+                lineNumber: 23
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            htmlFor: "name",
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\AddPost.jsx",
+                lineNumber: 24
+            },
+            __self: this
+        }, "Name: "), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "text",
+            name: "name",
+            id: "name",
+            value: this.state.name,
+            onChange: (event)=>this.onChange(event)
+            ,
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\AddPost.jsx",
+                lineNumber: 25
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\AddPost.jsx",
+                lineNumber: 30
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("label", {
+            htmlFor: "description",
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\AddPost.jsx",
+                lineNumber: 31
+            },
+            __self: this
+        }, "Description:"), /*#__PURE__*/ _reactDefault.default.createElement("input", {
+            type: "text",
+            name: "description",
+            id: "description",
+            value: this.state.description,
+            onChange: (event)=>this.onChange(event)
+            ,
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\AddPost.jsx",
+                lineNumber: 33
+            },
+            __self: this
+        })), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\AddPost.jsx",
+                lineNumber: 39
+            },
+            __self: this
+        }, /*#__PURE__*/ _reactDefault.default.createElement("button", {
+            onClick: (event)=>{
+                event.preventDefault();
+                save({
+                    name: this.state.name,
+                    description: this.state.description
+                });
+                this.setState({
+                    name: '',
+                    description: ''
+                });
+            },
+            __source: {
+                fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\AddPost.jsx",
+                lineNumber: 40
+            },
+            __self: this
+        }, "Save")))));
+    }
+}
+exports.default = AddPost;
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}

@@ -1,0 +1,48 @@
+var helpers = require("../node_modules/@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+helpers.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+function PostListItem(props) {
+    const { post  } = props;
+    return(/*#__PURE__*/ _reactDefault.default.createElement("tr", {
+        __source: {
+            fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\PostListItem.jsx",
+            lineNumber: 4
+        },
+        __self: this
+    }, /*#__PURE__*/ _reactDefault.default.createElement("td", {
+        __source: {
+            fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\PostListItem.jsx",
+            lineNumber: 5
+        },
+        __self: this
+    }, post.id), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+        __source: {
+            fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\PostListItem.jsx",
+            lineNumber: 6
+        },
+        __self: this
+    }, post.name), /*#__PURE__*/ _reactDefault.default.createElement("td", {
+        __source: {
+            fileName: "C:\\Users\\Nadya\\WebstormProjects\\ReactLab\\components\\PostListItem.jsx",
+            lineNumber: 7
+        },
+        __self: this
+    }, post.description)));
+}
+exports.default = PostListItem;
+_c = PostListItem;
+var _c;
+$RefreshReg$(_c, "PostListItem");
+
+  helpers.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
